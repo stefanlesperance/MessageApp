@@ -18,3 +18,13 @@
 //= require_tree .
 
 
+// Once turbolinks loads, the dropdown will kick in
+
+$(document).on('turbolinks:load', function() {
+
+$('.ui.dropdown')
+  .dropdown()
+;
+
+})
+
