@@ -13,32 +13,18 @@
 				<div class="ui feed">
 				  <div class="event">
 				    <div class="content">
-				      <div class="summary">
-				         <em>Christian Rocha</em>: Test Message
-				      </div>
+				    <% @messages.each do |message|%>
+					    <div class="event">
+					   	 <div class="content">
+					     	 <div class="summary">
+					        	 <em><%= message.body %></em>
+					      	</div>
+					   	 </div>
+					  	</div>
+				    <% end %>
 				    </div>
 				  </div>
-				  <div class="event">
-				    <div class="content">
-				      <div class="summary">
-				         <em>Christian Rocha</em>: Test Message
-				      </div>
-				    </div>
-				  </div>
-				  <div class="event">
-				    <div class="content">
-				      <div class="summary">
-				         <em>Christian Rocha</em>: Test Message
-				      </div>
-				    </div>
-				  </div>
-				  <div class="event">
-				    <div class="content">
-				      <div class="summary">
-				         <em>Christian Rocha</em>: Test Message
-				      </div>
-				    </div>
-				  </div>
+
 				</div>
 			</div>
 			<div class="extra content">
