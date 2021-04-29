@@ -1,7 +1,11 @@
 @import "semantic-ui";
 
 
+.card-container { 
+	display: flex !important; 
+	align-items: stretch; 
+}
 
-#darktext {
-	color: black
+.uiheight {
+	height: 800px !important;
 }
