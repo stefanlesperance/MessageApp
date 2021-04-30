@@ -3,6 +3,8 @@ class SessionsController < ApplicationController
 	end
 
 	def login
+		logged_in_redirect
+
 	end
 
 
@@ -22,8 +24,19 @@ class SessionsController < ApplicationController
 	def destroy
 		session[:user_id] = nil
 		flash[:success] = "Logged out"
-		redirect_to root_path
+		redirect_to login_path
 	end
+
+
+	protected
+
+	def logged_in_redirect
+		if logged_in?
+			flash[:error] = "You are already logged in."
+			redirect_to root_path
+		end
+	end
+
 
 
 
