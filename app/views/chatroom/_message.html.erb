@@ -22,7 +22,7 @@
 		    <div class="field">
 		    	<div class="ui fluid icon input">
 				  <%= f.text_field :body, placeholder: "Type something..." %>
-				  <i class="bordered inverted orange edit icon"></i>
+				  <%= f.button '<i class="bordered inverted orange edit icon"></i>'.html_safe %>
 				</div>
 		    </div>
 		  <% end %>
