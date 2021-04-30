@@ -3,6 +3,7 @@ class ChatroomController < ApplicationController
 
 	def home
 	@messages = Message.all
+	@message = Message.new
 	end
 
 	def require_user
