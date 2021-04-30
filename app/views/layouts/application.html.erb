@@ -13,7 +13,10 @@
   <body>
     <%= render 'layouts/navbar' %>
     <div class = "ui container">
-    <%= yield %>
+      <div class = "ui container">
+        <%= render 'shared/flash'%>
+      </div>
+      <%= yield %>
     </div>
   </body>
 </html>
