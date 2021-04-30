@@ -12,19 +12,8 @@
 			<div class="content">
 				<div class="ui feed">
 				  <div class="event">
-				    <div class="content">
-				    <% @messages.each do |message|%>
-					    <div class="event">
-					   	 <div class="content">
-					     	 <div class="summary">
-					        	 <em><%= message.user.username %>: </em><%= message.body %>
-					      	</div>
-					   	 </div>
-					  	</div>
-				    <% end %>
-				    </div>
+				  	<%= render 'message' %>
 				  </div>
-
 				</div>
 			</div>
 			<div class="extra content">
