@@ -26,6 +26,15 @@ scroll_bottom = function() {
 	}
 }
 
+submit_message = function() {
+  $('#message_body').on('keydown', function(e) {
+    if (e.keyCode == 13) {
+      $('button').click();
+      e.target.value = "";
+    };
+  });
+};
+
 // Once turbolinks loads, the dropdown will kick in
 
 $(document).on('turbolinks:load', function() {
@@ -41,10 +50,8 @@ $('.message .close')
       .transition('fade')
     ;
   })
-;
-
-	scroll_bottom()
-
+  submit_message();
+  scroll_bottom();
 })
 
 
