@@ -50,6 +50,8 @@ group :test do
   gem 'chromedriver-helper'
 end
 group :production do
+  gem 'puma', '~> 3.11'
+  gem 'rails_12factor'
   gem 'pg'
   gem 'redis', '~> 4.2', '>= 4.2.5'
 end
