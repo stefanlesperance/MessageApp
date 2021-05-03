@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   post 'message', to: 'messages#create'
+  #Mounting the websocket route
+  #Below is an example of how it ought to be.
+  mount ActionCable.server, at: '/cable'
 end
