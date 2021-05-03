@@ -18,6 +18,14 @@
 //= require_tree .
 
 
+scroll_bottom = function() {
+	// For more than one message, test
+	//This should scroll to the bottom by the scroll height of the zeroth element of these messages
+	if ($('#messages').length > 0) {
+		$('#messages').scrollTop($('#messages')[0].scrollHeight);
+	}
+}
+
 // Once turbolinks loads, the dropdown will kick in
 
 $(document).on('turbolinks:load', function() {
@@ -25,7 +33,6 @@ $(document).on('turbolinks:load', function() {
 $('.ui.dropdown')
   .dropdown()
 ;
-
 
 $('.message .close')
   .on('click', function() {
@@ -35,6 +42,8 @@ $('.message .close')
     ;
   })
 ;
+
+	scroll_bottom()
 
 })
 
