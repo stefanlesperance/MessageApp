@@ -6,4 +6,8 @@ App.chatroom = App.cable.subscriptions.create "ChatroomChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    # Called when there's incoming data on the websocket for this channel
+  	#Below is the basic alert trigger.
+  	#Next, we append so it shows up on the screen
+  	# What the below does is take the id of the div message-container, which wraps my chatroom view partial, and then
+  	# alerts it when new data is introduced, appending it.
+    $('#message-container').append data.mod_message
