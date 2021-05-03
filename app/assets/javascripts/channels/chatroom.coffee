@@ -10,4 +10,6 @@ App.chatroom = App.cable.subscriptions.create "ChatroomChannel",
   	#Next, we append so it shows up on the screen
   	# What the below does is take the id of the div message-container, which wraps my chatroom view partial, and then
   	# alerts it when new data is introduced, appending it.
+
     $('#message-container').append data.mod_message
+    scroll_bottom()
